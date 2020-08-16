@@ -8,7 +8,7 @@
     font-size: 12px;
     padding: 5px;
   }
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 650px) {
   .footer {
     margin-top: 30px;
   }
