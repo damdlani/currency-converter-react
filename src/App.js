@@ -1,32 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from './Container';
 import Footer from './Footer';
-
-
+import Form from './Form';
 
 function App() {
+  const [result, setResult] = useState(4)
+
+  const currencies = [
+    {
+      id: 1, 
+      name: "EUR",
+      value: 4.3988,
+    },
+    {
+      id: 2, 
+      name: "USD",
+      value: 3.7227,
+    },
+    {
+      id: 3, 
+      name: "GBP",
+      value: 4.8692,
+    },
+    {
+      id: 4, 
+      name: "CHF",
+      value: 4.0906,
+    },
+  ];
+
+
+
+  const countResult = (amount, currency) => {
+     return currency === currencies[0].name ? setResult(amount/currencies[0].value)
+          : currency === currencies[1].name ? setResult(amount/currencies[1].value)
+          : currency === currencies[2].name ? setResult(amount/currencies[2].value)
+          : setResult(amount/currencies[3].value)
+  };
+  console.log(result.toFixed(3))
+
   return (
     <Container>
-     
-        <form className="form">
-              <h1 className="form__title">Przelicznik walut</h1>
-                  <label className="form__label"><span className="form__span">Kwota w zł:</span>
-                      <input type="number" step="0.01" required min="0.01" className="form__input"/>
-                  </label>
-                  <label className="form__label"><span className="form__span">Waluta:</span>
-                      <select name="currencies" id="currency-select" className="form__currencies">
-                        <option className="form__currency" value="">Rozwiń, aby wybrać walutę</option>
-                        <option className="form__currency" value="EUR">Euro</option>
-                        <option className="form__currency" value="USD">Dolar amerykański</option>
-                        <option className="form__currency" value="GBP">Funt szterling</option>
-                        <option className="form__currency" value="CHf">Frank szwajcarski</option>
-                      </select>
-                  </label>    
-          <button className="form__button">Przelicz</button>
-        </form>
-        <p className="currencyInfo">Waluty przeliczane są na podstawie danych z: </p>
+        <Form countResult={countResult}/>
+        <div className="result">10.50PLN = 50EUR</div>
         <Footer name={"Krzysztof Kwieciński 2020"} />
-      
     </Container>
   );
 }
