@@ -8,3 +8,8 @@
     font-size: 12px;
     padding: 5px;
   }
+@media (orientation: landscape) {
+  .footer {
+    margin-top: 30px;
+  }
+}
