@@ -1,12 +1,13 @@
 import React from 'react';
 import Container from './Container';
+import Footer from './Footer';
 
 
 
 function App() {
   return (
     <Container>
-      <main className="main">
+     
         <form className="form">
               <h1 className="form__title">Przelicznik walut</h1>
                   <label className="form__label"><span className="form__span">Kwota w zł:</span>
@@ -23,8 +24,9 @@ function App() {
                   </label>    
           <button className="form__button">Przelicz</button>
         </form>
-      </main>
-      <footer className="footer">&copy;Krzysztof Kwieciński 2020</footer>
+        <p className="currencyInfo">Waluty przeliczane są na podstawie danych z: </p>
+        <Footer name={"Krzysztof Kwieciński 2020"} />
+      
     </Container>
   );
 }
