@@ -1,5 +1,5 @@
 import React from 'react'; 
-// import './style.css';
+import './style.css';
 
 const Result = ({amount, result, currency}) => (
 <div className="form__result">{amount}PLN = <strong>{result}{currency}</strong></div>

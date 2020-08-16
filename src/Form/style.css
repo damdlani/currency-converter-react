@@ -9,31 +9,7 @@
     text-align: center;
     margin-bottom: 30px;
   }
-  .form__label {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    /* background-color: aquamarine; */
-  }
-  .form__span {
-    flex-basis: 200px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    text-align: left;
-    padding-left: 5px;
-    padding-top: 5px;
-  }
-  .form__userAction {
-    flex-grow: 2;
-    flex-shrink: 0;
-    padding: 5px;
-    margin-left: 10px;
-    border-radius: 5px;
-    transition: .3s;
-  }
-  .form__userAction:hover {
-    transform: scale(1.01);
-  }
+  
 
   
   .form__button {
@@ -59,11 +35,4 @@
   text-align: left;
   font-size: 10px;
   margin: 10px;
-}
-.form__result {
-  /* background-color: aquamarine; */
-  text-align: center;
-  padding: 10px;
-  margin-top: 20px;
-  font-size: 20px;
 }
