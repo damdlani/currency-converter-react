@@ -34,11 +34,12 @@ const Form = ({countResult, result, resultAmount, resultCurrency, saveResultData
             <label className="form__label">
                 <span className="form__span">Kwota w zł*:</span>
                 <input 
-                    className="form__input"
+                    className="form__userAction"
                     type="number" 
                     step="0.01" 
                     required 
                     autoFocus
+                    placeholder="Wpisz kwotę"
                     min="0.01" 
                     value={amount}
                     onChange={changeAmount}
@@ -50,7 +51,7 @@ const Form = ({countResult, result, resultAmount, resultCurrency, saveResultData
                         value={currency}
                         required
                         name="currencies" 
-                        className="form__currencies"
+                        className="form__userAction"
                         onChange={handleCurrencySelect}
                         >
                             <option className="form__currency" value="">Rozwiń, aby wybrać walutę</option>
