@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
+import Result from '../Result';
 import './style.css';
 
-const Form = ({countResult}) => {
+const Form = ({countResult, result, resultAmount, resultCurrency, saveResultData}) => {
     const [amount, setAmount] = useState("")
     const [currency, setCurrency] = useState("")
+    const [showResult, setShowResult] = useState(false)
 
     const changeAmount = (event) => {
         setAmount(event.target.value)
     }
+    
+    
     const onFormSubmit = (event) => {
         event.preventDefault();
-        countResult(amount, currency)
-        
+        countResult(amount, currency);
+        saveResultData(amount, currency);
+        setShowResult(true)
+        setAmount("");   
+        setCurrency("");
+            
     }
     const handleCurrencySelect = (event) => {
         setCurrency(event.target.value);
@@ -30,6 +38,7 @@ const Form = ({countResult}) => {
                     type="number" 
                     step="0.01" 
                     required 
+                    autoFocus
                     min="0.01" 
                     value={amount}
                     onChange={changeAmount}
@@ -38,6 +47,7 @@ const Form = ({countResult}) => {
                   <label className="form__label">
                       <span className="form__span">Waluta*:</span>
                       <select 
+                        value={currency}
                         required
                         name="currencies" 
                         className="form__currencies"
@@ -52,7 +62,9 @@ const Form = ({countResult}) => {
                   </label>    
           <button className="form__button">Przelicz</button>
           <p className="form__info">Waluty przeliczane są na podstawie danych z tabeli nr 158/A/NBP/2020 z dnia 2020-08-14 </p>
+          {showResult ? <Result amount={resultAmount} result={result} currency={resultCurrency} /> : ""}
     </form>
+    
 };
 
 export default Form;

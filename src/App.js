@@ -4,7 +4,9 @@ import Footer from './Footer';
 import Form from './Form';
 
 function App() {
-  const [result, setResult] = useState(4)
+  const [result, setResult] = useState(0)
+  const [resultAmount, setResultAmount] = useState(0)
+  const [resultCurrency, setResultCurrency] = useState("")
 
   const currencies = [
     {
@@ -29,20 +31,28 @@ function App() {
     },
   ];
 
-
+  const saveResultData = (amount, currency) => {
+    setResultAmount(amount);
+    setResultCurrency(currency);
+  }
 
   const countResult = (amount, currency) => {
      return currency === currencies[0].name ? setResult(amount/currencies[0].value)
           : currency === currencies[1].name ? setResult(amount/currencies[1].value)
           : currency === currencies[2].name ? setResult(amount/currencies[2].value)
-          : setResult(amount/currencies[3].value)
+          : setResult(amount/currencies[3].value);
   };
   console.log(result.toFixed(3))
 
   return (
     <Container>
-        <Form countResult={countResult}/>
-        <div className="result">10.50PLN = 50EUR</div>
+        <Form 
+          countResult={countResult} 
+          result={result.toFixed(3)} 
+          saveResultData={saveResultData}
+          resultAmount={resultAmount} 
+          resultCurrency={resultCurrency} 
+        />
         <Footer name={"Krzysztof Kwieciński 2020"} />
     </Container>
   );
