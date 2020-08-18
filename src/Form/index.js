@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Result from '../Result';
-import Input from '../Input';
-import Select from '../Select';
-import Label from '../Label';
+import Result from './Result';
+import Input from './Input';
+import Select from './Select';
+import Label from './Label';
 import './style.css';
 
 const Form = ({countResult, result, resultAmount, resultCurrency, saveResultData}) => {
@@ -13,7 +13,6 @@ const Form = ({countResult, result, resultAmount, resultCurrency, saveResultData
     const changeAmount = (event) => {
         setAmount(event.target.value)
     }
-    
     
     const onFormSubmit = (event) => {
         event.preventDefault();
