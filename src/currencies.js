@@ -1,25 +1,25 @@
 export const currencies = [
     {
       id: 1, 
-      name: "EUR",
+      shortname: "EUR",
       fullname: "Euro",
       value: 4.3988,
     },
     {
       id: 2, 
-      name: "USD",
+      shortname: "USD",
       fullname: "Dolar amerykański",
       value: 3.7227,
     },
     {
       id: 3, 
-      name: "GBP",
+      shortname: "GBP",
       fullname: "Funt szterling",
       value: 4.8692,
     },
     {
       id: 4, 
-      name: "CHF",
+      shortname: "CHF",
       fullname: "Frank szwajcarski",
       value: 4.0906,
     },

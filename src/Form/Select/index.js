@@ -9,9 +9,20 @@ const Select = ({currency, handleCurrencySelect}) => (
         className="form__userAction"
         onChange={handleCurrencySelect}
     >
-        <option className="form__currency" value="">Rozwiń, aby wybrać walutę</option>
-        {currencies.map(({id, name, fullname}) => 
-            <option className="form__currency" key={id} value={name}>{fullname}</option>
+        <option 
+            className="form__currency" 
+            value=""
+        >
+                Rozwiń, aby wybrać walutę
+        </option>
+        {currencies.map(({id, shortname, fullname}) => 
+            <option 
+                className="form__currency" 
+                key={id} 
+                value={shortname}
+            >
+                    {fullname}
+            </option>
         )}
     </select>
 );

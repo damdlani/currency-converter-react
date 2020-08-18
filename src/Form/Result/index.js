@@ -1,9 +1,19 @@
 import React from 'react'; 
 import './style.css';
 
-const Result = ({amount, result, currency}) => (
+const Result = ({result}) => (
     <div className="form__result">
-        {amount}PLN = <strong>{result}{currency}</strong>
+        {
+            result !== undefined ? 
+                <>
+                    {result.fromAmount}&nbsp;PLN&nbsp;= 
+                    <strong>
+                        {" "}{result.toAmount}&nbsp;{result.currency}
+                    </strong> 
+                </>
+                :
+                ""
+        }
     </div>
 );
 

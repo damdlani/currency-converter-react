@@ -5,26 +5,23 @@ import Select from './Select';
 import Label from './Label';
 import './style.css';
 
-const Form = ({countResult, result, resultAmount, resultCurrency, saveResultData}) => {
+const Form = ({countResult, result}) => {
     const [amount, setAmount] = useState("")
     const [currency, setCurrency] = useState("")
-    const [showResult, setShowResult] = useState(false)
 
-    const changeAmount = (event) => {
-        setAmount(event.target.value)
+    const changeAmount = ({target}) => {
+        setAmount(target.value)
     }
     
     const onFormSubmit = (event) => {
         event.preventDefault();
         countResult(amount, currency);
-        saveResultData(amount, currency);
-        setShowResult(true)
         setAmount("");   
         setCurrency("");
             
     }
-    const handleCurrencySelect = (event) => {
-        setCurrency(event.target.value);
+    const handleCurrencySelect = ({target}) => {
+        setCurrency(target.value);
     }
 
     return <form 
@@ -53,7 +50,7 @@ const Form = ({countResult, result, resultAmount, resultCurrency, saveResultData
             />    
           <button className="form__button">Przelicz</button>
           <p className="form__info">Waluty przeliczane są na podstawie danych z tabeli nr 158/A/NBP/2020 z dnia 2020-08-14 </p>
-          {showResult ? <Result amount={resultAmount} result={result} currency={resultCurrency} /> : ""}
+          <Result result={result} />
     </form>
     
 };
