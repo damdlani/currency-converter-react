@@ -1,4 +1,5 @@
 import React from 'react';
+import { currencies } from '../../currencies'
 
 const Select = ({currency, handleCurrencySelect}) => (
     <select 
@@ -9,10 +10,9 @@ const Select = ({currency, handleCurrencySelect}) => (
         onChange={handleCurrencySelect}
     >
         <option className="form__currency" value="">Rozwiń, aby wybrać walutę</option>
-        <option className="form__currency" value="EUR">Euro</option>
-        <option className="form__currency" value="USD">Dolar amerykański</option>
-        <option className="form__currency" value="GBP">Funt szterling</option>
-        <option className="form__currency" value="CHF">Frank szwajcarski</option>
+        {currencies.map(({id, name, fullname}) => 
+            <option className="form__currency" key={id} value={name}>{fullname}</option>
+        )}
     </select>
 );
 

@@ -2,34 +2,14 @@ import React, { useState } from 'react';
 import Container from './Container';
 import Footer from './Footer';
 import Form from './Form';
+import { currencies } from './currencies'
 
 function App() {
   const [result, setResult] = useState(0)
   const [resultAmount, setResultAmount] = useState(0)
   const [resultCurrency, setResultCurrency] = useState("")
 
-  const currencies = [
-    {
-      id: 1, 
-      name: "EUR",
-      value: 4.3988,
-    },
-    {
-      id: 2, 
-      name: "USD",
-      value: 3.7227,
-    },
-    {
-      id: 3, 
-      name: "GBP",
-      value: 4.8692,
-    },
-    {
-      id: 4, 
-      name: "CHF",
-      value: 4.0906,
-    },
-  ];
+  
 
   const saveResultData = (amount, currency) => {
     setResultAmount(amount);
