@@ -1,11 +1,14 @@
 .form {
     width: 100%;
-    padding: 20px;
-    /* margin: 20px 0; */
-    /* transform: translateY(25%); */
+    padding: 20px 30px;
     background-color: rgb(255, 255, 255, .9);
     border: hsl(0, 0%, 30%) solid 1px;
-    border-radius: 50px;
+    border-radius: 30px;
+  }
+  @media (max-width: 767px) {
+    .form{
+      padding: 20px;
+    }
   }
   .form__title {
     text-transform: uppercase;

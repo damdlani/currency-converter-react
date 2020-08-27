@@ -3,6 +3,7 @@ import Result from './Result';
 import Input from './Input';
 import Select from './Select';
 import Label from './Label';
+import Clock from './Clock';
 import './style.css';
 
 const Form = ({countResult, result}) => {
@@ -28,7 +29,7 @@ const Form = ({countResult, result}) => {
                 className="form"
                 onSubmit={onFormSubmit}
             >
-                
+            <Clock />
             <h1 className="form__title">Przelicznik walut</h1>
             <Label 
                 spanContent={"Kwota w zł"} 
