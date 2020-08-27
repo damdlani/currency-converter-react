@@ -17,7 +17,7 @@ const Clock = () => {
         };
     }, [])
 
-    const day = date.toLocaleDateString(undefined, {
+    const day = date.toLocaleDateString("pl-PL", {
                     day: "numeric", 
                     month: "long",
                     weekday: "long"
