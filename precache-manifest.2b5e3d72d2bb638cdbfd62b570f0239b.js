@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7f0abd31b0473bc61e47c85c2c639351",
+    "revision": "8453adb0185f5860ee526ad3cc721bd3",
     "url": "/currency-converter-react/index.html"
   },
   {
-    "revision": "a82545711ade48fafe38",
-    "url": "/currency-converter-react/static/css/main.2aae1772.chunk.css"
+    "revision": "b123822d3c396337eb99",
+    "url": "/currency-converter-react/static/css/main.7f38a61f.chunk.css"
   },
   {
     "revision": "905154bdb5ec382c7432",
@@ -16,11 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/currency-converter-react/static/js/2.ca30315d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a82545711ade48fafe38",
-    "url": "/currency-converter-react/static/js/main.16c8a8e7.chunk.js"
+    "revision": "b123822d3c396337eb99",
+    "url": "/currency-converter-react/static/js/main.7200f9e5.chunk.js"
   },
   {
     "revision": "015aa95f07033766b799",
     "url": "/currency-converter-react/static/js/runtime-main.9bac7e2b.js"
+  },
+  {
+    "revision": "ee7475080f27d93b23c6f247cca17765",
+    "url": "/currency-converter-react/static/media/bgd1920.ee747508.jpg"
   }
 ]);
