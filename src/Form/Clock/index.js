@@ -22,7 +22,7 @@ const Clock = () => {
                     month: "long",
                     weekday: "long"
                 });
-    const time = date.toLocaleTimeString();
+    const time = date.toLocaleTimeString("pl-PL");
 
     return (
         <>
