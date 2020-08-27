@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-
 }
 
 *,
@@ -12,6 +11,12 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  background-image: url(./images/bgd1920.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 
 

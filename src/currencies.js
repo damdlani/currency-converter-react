@@ -19,7 +19,7 @@ export const currencies = [
     },
     {
       id: 4, 
-      shortname: "CHF",
+      shortname  : "CHF",
       fullname: "Frank szwajcarski",
       value: 4.0906,
     },
