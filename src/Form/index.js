@@ -3,7 +3,7 @@ import Result from './Result';
 import Input from './Input';
 import Select from './Select';
 import Label from './Label';
-import Clock from './Clock';
+import { Clock } from './Clock';
 import './style.css';
 
 const Form = ({countResult, result}) => {
