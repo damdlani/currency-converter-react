@@ -1,11 +1,11 @@
 import React from 'react';
-import './style.css';
+import { StyledLabel, Span } from './styled';
 
-const Label = ({spanContent, userActionField}) => (
-    <label className="form__label">
-        <span className="form__span">{spanContent}*:</span>
+const Label = ({ spanContent, userActionField }) => (
+    <StyledLabel>
+        <Span className="form__span">{spanContent}*:</Span>
         {userActionField}
-    </label>
+    </StyledLabel>
 );
 
 export default Label;
