@@ -25,34 +25,34 @@ const Form = ({countResult, result}) => {
         setCurrency(target.value);
     }
 
-    return <form 
+    return  <form 
                 className="form"
                 onSubmit={onFormSubmit}
             >
-            <Clock />
-            <h1 className="form__title">Przelicznik walut</h1>
-            <Label 
-                spanContent={"Kwota w zł"} 
-                userActionField={
-                                <Input 
-                                    amount={amount}
-                                    changeAmount={changeAmount}
-                                />
-                                }
-            />
-            <Label 
-                spanContent={"Waluta"}
-                userActionField={
-                                <Select 
-                                    currency={currency}
-                                    handleCurrencySelect={handleCurrencySelect} 
-                                />
-                                }
-            />    
-          <button className="form__button">Przelicz</button>
-          <p className="form__info">Waluty przeliczane są na podstawie danych z tabeli nr 158/A/NBP/2020 z dnia 2020-08-14 </p>
-          <Result result={result} />
-    </form>
+                <Clock />
+                <h1 className="form__title">Przelicznik walut</h1>
+                <Label 
+                    spanContent={"Kwota w zł"} 
+                    userActionField={
+                                    <Input 
+                                        amount={amount}
+                                        changeAmount={changeAmount}
+                                    />
+                                    }
+                />
+                <Label 
+                    spanContent={"Waluta"}
+                    userActionField={
+                                    <Select 
+                                        currency={currency}
+                                        handleCurrencySelect={handleCurrencySelect} 
+                                    />
+                                    }
+                />    
+                <button className="form__button">Przelicz</button>
+                <p className="form__info">Waluty przeliczane są na podstawie danych z tabeli nr 158/A/NBP/2020 z dnia 2020-08-14 </p>
+                <Result result={result} />
+            </form>
     
 };
 
