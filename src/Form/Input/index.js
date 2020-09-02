@@ -1,8 +1,8 @@
 import React from 'react';
+import {StyledInput} from '../styled';
 
 const Input = ({amount, changeAmount}) => (
-    <input 
-        className="form__userAction"
+    <StyledInput
         type="number" 
         step="0.01" 
         required 

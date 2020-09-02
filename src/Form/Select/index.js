@@ -1,12 +1,13 @@
 import React from 'react';
 import { currencies } from '../../currencies'
+import {StyledInput} from '../styled';
 
 const Select = ({currency, handleCurrencySelect}) => (
-    <select 
+    <StyledInput 
+        as="select"
         value={currency}
         required
         name="currencies" 
-        className="form__userAction"
         onChange={handleCurrencySelect}
     >
         <option 
@@ -24,7 +25,7 @@ const Select = ({currency, handleCurrencySelect}) => (
                     {fullname}
             </option>
         )}
-    </select>
+    </StyledInput>
 );
 
 export default Select;

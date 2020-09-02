@@ -51,3 +51,20 @@ export const Paragraph = styled.p `
     font-size: 10px;
     margin: 10px;
 `;
+
+export const StyledInput = styled.input`
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .3s;
+
+    &:hover {
+        transform: scale(1.01);
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+`;
