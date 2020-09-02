@@ -4,7 +4,7 @@ import Input from './Input';
 import Select from './Select';
 import Label from './Label';
 import { Clock } from './Clock';
-import './style.css';
+import { StyledForm, Header, Button, Paragraph } from './styled';
 
 const Form = ({countResult, result}) => {
     const [amount, setAmount] = useState("")
@@ -16,21 +16,18 @@ const Form = ({countResult, result}) => {
     
     const onFormSubmit = (event) => {
         event.preventDefault();
-        countResult(amount, currency);
-        setAmount("");   
-        setCurrency("");
-            
+        countResult(amount, currency);           
     }
+    
     const handleCurrencySelect = ({target}) => {
         setCurrency(target.value);
     }
 
-    return  <form 
-                className="form"
+    return  <StyledForm 
                 onSubmit={onFormSubmit}
             >
                 <Clock />
-                <h1 className="form__title">Przelicznik walut</h1>
+                <Header>Przelicznik walut</Header>
                 <Label 
                     spanContent={"Kwota w zł"} 
                     userActionField={
@@ -49,10 +46,10 @@ const Form = ({countResult, result}) => {
                                     />
                                     }
                 />    
-                <button className="form__button">Przelicz</button>
-                <p className="form__info">Waluty przeliczane są na podstawie danych z tabeli nr 158/A/NBP/2020 z dnia 2020-08-14 </p>
+                <Button>Przelicz</Button>
+                <Paragraph>Waluty przeliczane są na podstawie danych z tabeli nr 158/A/NBP/2020 z dnia 2020-08-14 </Paragraph>
                 <Result result={result} />
-            </form>
+            </StyledForm>
     
 };
 
