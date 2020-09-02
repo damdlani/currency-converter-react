@@ -1,8 +1,8 @@
 import React from 'react'; 
-import './style.css';
+import { StyledResult } from './styled';
 
 const Result = ({result}) => (
-    <div className="form__result">
+    <StyledResult>
         {
             result !== undefined ? 
                 <>
@@ -14,7 +14,7 @@ const Result = ({result}) => (
                 :
                 ""
         }
-    </div>
+    </StyledResult>
 );
 
 export default Result;
