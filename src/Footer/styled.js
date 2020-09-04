@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
-    
     position: absolute;
     top: 100%;
     left: 0;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCurrentDate } from '../useCurrentDate';
+import { useCurrentDate } from './useCurrentDate';
 import { StyledClock } from './styled';
 
 export const Clock = () => {
