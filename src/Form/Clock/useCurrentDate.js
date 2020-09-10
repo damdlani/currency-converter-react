@@ -19,6 +19,8 @@ export const useCurrentDate = () => {
                     weekday: "long"
                 });
     const time = date.toLocaleTimeString("pl-PL");
+
+    const fullDate = `${day}, ${time}`;
     
-    return {day, time};
+    return fullDate;
 };

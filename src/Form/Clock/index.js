@@ -8,7 +8,7 @@ export const Clock = () => {
     return (
         <>
         <StyledClock>
-            Dzisiaj jest {date.day}, {date.time}
+            Dzisiaj jest {date}.
         </StyledClock>
         </>
 
