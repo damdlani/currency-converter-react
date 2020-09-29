@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Container from './Container';
 import Footer from './Footer';
 import Form from './Form';
-import { currencies } from './currencies'
 import { useAPIrates } from './useAPIRates';
 
 
@@ -22,7 +21,7 @@ function App() {
       currency,
     })
   };
-
+  console.log(ratesData.errorStatus)
   
 
   return (
@@ -34,7 +33,7 @@ function App() {
               date={ratesData.date}
               rates={Object.keys(ratesData.rates)}
             /> :
-            ratesData.loading  
+            !ratesData.errorStatus ? ratesData.loading : ratesData.error
     }
         <Footer name={"Krzysztof Kwieciński 2020"} />
     </Container>

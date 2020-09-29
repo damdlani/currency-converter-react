@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 export const useAPIrates = () => {
     const [ratesData, setRatesData] = useState({
       loading: "Trwa pobieranie danych, proszę czekać",
-      error: "Niestety wystąpił błąd, proszę spróbować ponownie"
+      error: "Niestety wystąpił błąd, proszę załadować ponownie stronę :)",
+      errorStatus: false,
     });
   
     useEffect(() => {
@@ -17,8 +18,8 @@ export const useAPIrates = () => {
             })
             .then(response => response.json())
             .then(response => setRatesData({...ratesData, date: response.date, rates: response.rates}))
-            .catch(error => console.error(error));
-          }, 500);
+            .catch(setRatesData({...ratesData, errorStatus: true}));
+          }, 2000);
       }, [])   
      return ratesData;
   };
