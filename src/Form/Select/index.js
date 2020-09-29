@@ -4,10 +4,7 @@ import { StyledInput } from '../styled';
 
 const Select = ({currency, handleCurrencySelect, rates}) => {
 
-
-    console.log(rates)
-
-    return <StyledInput 
+   return <StyledInput 
         as="select"
         value={currency}
         required

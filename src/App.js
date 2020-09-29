@@ -11,11 +11,10 @@ import { useAPIrates } from './useAPIRates';
 function App() {
   const [result, setResult] = useState()  
 
-  const API = useAPIrates();
-
+  const ratesData = useAPIrates();
   
   const countResult = (amount, currency) => {
-    const rate = currencies.find(({shortname}) => shortname === currency).value;
+    const rate = ratesData.rates[currency];
     
     setResult({
       fromAmount: +amount,
@@ -28,14 +27,14 @@ function App() {
 
   return (
     <Container>
-      {API.rates ? 
+      {ratesData.rates ? 
               <Form 
               countResult={countResult} 
               result={result}
-              date={API.date}
-              rates={Object.keys(API.rates)}
+              date={ratesData.date}
+              rates={Object.keys(ratesData.rates)}
             /> :
-            API.loading  
+            ratesData.loading  
     }
         <Footer name={"Krzysztof Kwieciński 2020"} />
     </Container>
