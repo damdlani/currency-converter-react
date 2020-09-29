@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyledInput } from '../styled';
-// import { useAPIrates } from '../../useAPIRates';
 
 const Select = ({currency, handleCurrencySelect, rates}) => {
 

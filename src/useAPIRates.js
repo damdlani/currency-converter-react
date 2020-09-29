@@ -9,7 +9,7 @@ export const useAPIrates = () => {
   
     useEffect(() => {
           setTimeout(() => {
-            fetch("/currency-converter-react/data.json")
+            fetch("https://api.exchangeratesapi.io/latest?base=PLN")
             .then(response => {
                 if(!response.ok) {
                   throw new Error();
@@ -22,7 +22,7 @@ export const useAPIrates = () => {
                 setRatesData({...ratesData, errorStatus: true})
                 console.error(error);
             });
-          }, 2000);
+          }, 1000);
       }, [])   
      return ratesData;
   };
