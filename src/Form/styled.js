@@ -47,7 +47,7 @@ export const Button = styled.button `
 export const Paragraph = styled.p `
     display: block;
     width: 100%;
-    text-align: left;
+    text-align: center;
     font-size: 10px;
     margin: 10px;
 `;

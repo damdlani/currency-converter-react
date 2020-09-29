@@ -6,7 +6,7 @@ import Label from './Label';
 import { Clock } from './Clock';
 import { StyledForm, Header, Button, Paragraph } from './styled';
 
-const Form = ({countResult, result}) => {
+const Form = ({countResult, result, date, rates}) => {
     const [amount, setAmount] = useState("")
     const [currency, setCurrency] = useState("")
 
@@ -41,13 +41,14 @@ const Form = ({countResult, result}) => {
                     spanContent={"Waluta"}
                     userActionField={
                                     <Select 
+                                        rates={rates}
                                         currency={currency}
                                         handleCurrencySelect={handleCurrencySelect} 
                                     />
                                     }
                 />    
                 <Button>Przelicz</Button>
-                <Paragraph>Waluty przeliczane są na podstawie danych z tabeli nr 158/A/NBP/2020 z dnia 2020-08-14 </Paragraph>
+                <Paragraph>Waluty przeliczane są na podstawie danych z Europejskiego Banku Centralnego z&nbsp;dnia&nbsp;{date} </Paragraph>
                 <Result result={result} />
             </StyledForm>
     

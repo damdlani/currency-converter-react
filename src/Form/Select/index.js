@@ -1,9 +1,13 @@
 import React from 'react';
-import { currencies } from '../../currencies'
-import {StyledInput} from '../styled';
+import { StyledInput } from '../styled';
+// import { useAPIrates } from '../../useAPIRates';
 
-const Select = ({currency, handleCurrencySelect}) => (
-    <StyledInput 
+const Select = ({currency, handleCurrencySelect, rates}) => {
+
+
+    console.log(rates)
+
+    return <StyledInput 
         as="select"
         value={currency}
         required
@@ -16,16 +20,16 @@ const Select = ({currency, handleCurrencySelect}) => (
         >
                 Rozwiń, aby wybrać walutę
         </option>
-        {currencies.map(({id, shortname, fullname}) => 
+        {rates.map(rate => 
             <option 
                 className="form__currency" 
-                key={id} 
-                value={shortname}
+                key={rates.indexOf(rate)} 
+                value={rate}
             >
-                    {fullname}
+                    {rate}
             </option>
         )}
     </StyledInput>
-);
+};
 
 export default Select;

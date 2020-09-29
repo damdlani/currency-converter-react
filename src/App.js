@@ -12,7 +12,7 @@ function App() {
   const [result, setResult] = useState()  
 
   const API = useAPIrates();
-  API.rates ? console.log(Object.keys(API.rates)) : console.log("dupa");
+
   
   const countResult = (amount, currency) => {
     const rate = currencies.find(({shortname}) => shortname === currency).value;
@@ -33,6 +33,7 @@ function App() {
               countResult={countResult} 
               result={result}
               date={API.date}
+              rates={Object.keys(API.rates)}
             /> :
             API.loading  
     }
