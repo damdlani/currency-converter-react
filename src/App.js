@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Container from './Container';
 import Footer from './Footer';
 import Form from './Form';
+import { NoDataDiv } from './NoDataDiv';
 import { useAPIrates } from './useAPIRates';
 
 
@@ -20,9 +21,7 @@ function App() {
       toAmount: (amount / rate).toFixed(3),
       currency,
     })
-  };
-  console.log(ratesData.errorStatus)
-  
+  };  
 
   return (
     <Container>
@@ -32,8 +31,11 @@ function App() {
               result={result}
               date={ratesData.date}
               rates={Object.keys(ratesData.rates)}
-            /> :
-            !ratesData.errorStatus ? ratesData.loading : ratesData.error
+            /> : 
+            <NoDataDiv
+              statusInfo={!ratesData.errorStatus ? ratesData.loading : ratesData.error}
+            >
+            </NoDataDiv>
     }
         <Footer name={"Krzysztof Kwieciński 2020"} />
     </Container>
