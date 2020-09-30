@@ -16,13 +16,13 @@ const Select = ({currency, handleCurrencySelect, rates}) => {
         >
                 Rozwiń, aby wybrać walutę
         </option>
-        {rates.map(rate => 
+        {Object.keys(rates).map(currency => 
             <option 
                 className="form__currency" 
-                key={rates.indexOf(rate)} 
-                value={rate}
+                key={currency} 
+                value={currency}
             >
-                    {rate}
+                    {currency}
             </option>
         )}
     </StyledInput>

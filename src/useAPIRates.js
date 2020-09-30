@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 
 export const useAPIrates = () => {
     const [ratesData, setRatesData] = useState({
-      loading: "Trwa pobieranie danych, proszę czekać...",
-      error: "Niestety wystąpił błąd, proszę ponownie załadować stronę.",
-      errorStatus: false,
+      successStatus: false,
     });
   
     useEffect(() => {
@@ -17,11 +15,12 @@ export const useAPIrates = () => {
                 return response;
             })
             .then(response => response.json())
-            .then(response => setRatesData({...ratesData, date: response.date, rates: response.rates}))
-            .catch(error => {
-                setRatesData({...ratesData, errorStatus: true})
-                console.error(error);
-            });
+            .then(response => setRatesData({
+                successStatus: true,
+                date: response.date,
+                rates: response.rates
+            }))
+            .catch(() => setRatesData({errorStatus: true}));
           }, 1000);
       }, [])   
      return ratesData;

@@ -5,9 +5,6 @@ import Form from './Form';
 import { NoDataDiv } from './NoDataDiv';
 import { useAPIrates } from './useAPIRates';
 
-
-
-
 function App() {
   const [result, setResult] = useState()  
 
@@ -25,17 +22,17 @@ function App() {
 
   return (
     <Container>
-      {ratesData.rates ? 
+      {ratesData.successStatus ? 
               <Form 
               countResult={countResult} 
               result={result}
               date={ratesData.date}
-              rates={Object.keys(ratesData.rates)}
+              rates={ratesData.rates}
             /> : 
             <NoDataDiv
-              statusInfo={!ratesData.errorStatus ? ratesData.loading : ratesData.error}
-            >
-            </NoDataDiv>
+              statusInfo={ratesData.errorStatus ? "error" : "loading"}
+            />
+            
     }
         <Footer name={"Krzysztof Kwieciński 2020"} />
     </Container>
