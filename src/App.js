@@ -15,7 +15,7 @@ function App() {
     
     setResult({
       fromAmount: +amount,
-      toAmount: (amount / rate).toFixed(3),
+      toAmount: (amount * rate).toFixed(3),
       currency,
     })
   };  
