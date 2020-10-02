@@ -4,7 +4,7 @@ import { StyledResult } from './styled';
 const Result = ({result}) => (
     <StyledResult>
         {
-            result !== undefined ? 
+            result ? 
                 <>
                     {result.fromAmount}&nbsp;PLN&nbsp;= 
                     <strong>

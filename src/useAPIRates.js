@@ -21,7 +21,7 @@ export const useAPIrates = () => {
                 rates: response.rates
             }))
             .catch(() => setRatesData({errorStatus: true}));
-          }, 1000);
+          }, 0);
       }, [])   
      return ratesData;
   };
