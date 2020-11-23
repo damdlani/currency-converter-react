@@ -1,6 +1,6 @@
 # Currency Converter 
 
-## DEMO **[Currency Converter](https://damdlani.github.io/currency-converter-react/)**
+## DEMO **[Currency Converter - (GitHub Pages)](https://damdlani.github.io/currency-converter-react/)**
 <br>
 <br>
 
