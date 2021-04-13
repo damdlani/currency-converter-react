@@ -7,7 +7,7 @@ const Input = ({amount, changeAmount}) => (
         step="0.01" 
         required 
         autoFocus
-        placeholder="Wpisz kwotę"
+        placeholder="Enter amount"
         min="0.01" 
         value={amount}
         onChange={changeAmount}

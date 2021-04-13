@@ -14,7 +14,7 @@ const Select = ({currency, handleCurrencySelect, rates}) => {
             className="form__currency" 
             value=""
         >
-                Rozwiń, aby wybrać walutę
+                Click to select currency
         </option>
         {Object.keys(rates).map(currency => 
             <option 

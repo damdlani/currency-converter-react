@@ -45,9 +45,9 @@ const Form = () => {
                 onSubmit={onFormSubmit}
                 >
                 <Clock />
-                <Header>Przelicznik walut</Header>
+                <Header>Currency converter</Header>
                 <Label 
-                    spanContent={"Kwota"} 
+                    spanContent={"Amount in EUR "} 
                     userActionField=
                     {
                     <Input 
@@ -57,7 +57,7 @@ const Form = () => {
                     }
                 />
                 <Label 
-                    spanContent={"Waluta"}
+                    spanContent={"Currency"}
                     userActionField=
                     {
                     <Select 
@@ -67,8 +67,8 @@ const Form = () => {
                     />
                     }
                 />    
-                <Button>Przelicz</Button>
-                <Paragraph>Waluty przeliczane są na podstawie danych z Europejskiego Banku Centralnego z&nbsp;dnia&nbsp;{ratesData.date} </Paragraph>
+                <Button>Convert</Button>
+                <Paragraph>Currency values based on European Central Bank's data of&nbsp;{ratesData.date} </Paragraph>
                 <Result result={result} />
             </StyledForm> :
             <NoDataDiv

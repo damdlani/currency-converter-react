@@ -6,7 +6,7 @@ const Result = ({result}) => (
         {
             result ? 
                 <>
-                    {result.fromAmount}&nbsp;PLN&nbsp;= 
+                    {result.fromAmount}&nbsp;EUR&nbsp;= 
                     <strong>
                         {" "}{result.toAmount}&nbsp;{result.currency}
                     </strong> 

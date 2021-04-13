@@ -6,7 +6,7 @@ import error from '../images/error.png'
 export const NoDataDiv = ({statusInfo}) => {
     return <Div>
         {statusInfo === "error" ? 
-        <div><img src={error} width={"200px"} alt=""/><br/>Niestety wystąpił błąd.<br/><br/> Proszę sprawdzić połączenie z internetem i ponownie załadować stronę.</div> : 
-        <div><img src={loading} alt=""/><br/>Trwa ładowanie danych, proszę czekać</div>}
+        <div><img src={error} width={"200px"} alt=""/><br/>Unfortunately an error occured.<br/><br/> Please check your network connection and reload the page.</div> : 
+        <div><img src={loading} alt=""/><br/>Loading data, please wait</div>}
     </Div>
 };

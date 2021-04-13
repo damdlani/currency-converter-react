@@ -13,12 +13,12 @@ export const useCurrentDate = () => {
         };
     }, [])
 
-    const day = date.toLocaleDateString("pl-PL", {
+    const day = date.toLocaleDateString("en-AM", {
                     day: "numeric", 
                     month: "long",
                     weekday: "long"
                 });
-    const time = date.toLocaleTimeString("pl-PL");
+    const time = date.toLocaleTimeString("en-AM");
 
     const fullDate = `${day}, ${time}`;
     
