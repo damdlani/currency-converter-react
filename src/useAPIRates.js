@@ -7,7 +7,7 @@ export const useAPIrates = () => {
   
     useEffect(() => {
           setTimeout(() => {
-            fetch("https://api.exchangeratesapi.io/latest?base=PLN")
+            fetch("http://api.exchangeratesapi.io/v1/latest?access_key=53fc72141847e9f19f6799b56ddf6d68&symbols=USD,AUD,CAD,PLN,MXN")
             .then(response => {
                 if(!response.ok) {
                   throw new Error();
