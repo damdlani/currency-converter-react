@@ -1,6 +1,7 @@
 # Currency Converter 
 
-## DEMO **[Currency Converter - (GitHub Pages)](https://damdlani.github.io/currency-converter-react/)**
+## DEMO **[Currency Converter - (GitHub Pages)](https://damdlani.github.io/currency-converter-react/)** 
+**unfortunately currently error occurs due to restrictions introduced by API provider - looking for another API**
 <br>
 <br>
 
